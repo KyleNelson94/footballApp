@@ -40,7 +40,7 @@ class Particles extends Component {
     for (var i = 0; i < _this.state.cirlces; i++) {
       let moveX = true,
         moveY = true,
-        movePos;
+        movePos = true;
       if (Math.round(_this.randomInt(0, 1)) == 0) moveX = false;
       if (Math.round(_this.randomInt(0, 1)) == 0) moveY = false;
       let partX = _this.randomInt(0, _this.state.maxX),
@@ -54,7 +54,8 @@ class Particles extends Component {
         size: partSize,
         moveX: moveX,
         moveY: moveY,
-        color: _this.particleColor()
+        color: _this.particleColor(),
+        movePos: this.randomInt(_this.state.maxX, _this.state.maxY)
       };
     }
     this.renderCircles();

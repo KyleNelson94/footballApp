@@ -6,10 +6,8 @@ import LinearGrad from "../components/linearGradient";
 import ProfileHeader from "../components/profileHeader";
 import MWLogo from "../assets/icons/mwLogo";
 import Particles from "../components/particles";
+import axios from 'axios';
 class Home extends Component {
-  // state = {
-  //   HeaderText: Text
-  // };
   render() {
     return (
       <React.Fragment>
